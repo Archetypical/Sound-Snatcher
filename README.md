@@ -1,6 +1,6 @@
-# Project Title
+# Sound Snatcher
 
-Sound Snatcher - No Frills. Just Sounds.
+No Frills. Just Sounds.
 
 ## Description
 

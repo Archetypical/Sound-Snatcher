@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuiceBeam</title>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <script src="https://kit.fontawesome.com/a6287a314d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="viewport">
+        <div class="player-window">
+            <div class=sound-details>
+                <div class="sound-content">
+                    <div class="sound-info">
+                        <h2 class="sound-title">No Sound Searched</h2>
+                        <p class="sound-artist">Artist Name</p>
+                    </div>
+                    <img src="https://watermark.lovepik.com/photo/40022/6761.jpg_wh1200.jpg" class="sound-image"></img>
+                    <div class="sound-controls">
+                        <div class="sound-time">
+                            <p class="current-time">0:00</p>
+                            <p class="duration"></p>
+                        </div>
+                        <div class="container">
+                            <div class="progress">
+                                <div class="played">
+                                    <div class="circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sound-buttons">
+                            <div class="misc-wrap repeat">
+                                <i class="fas fa-circle-notch repeat-icon"></i>
+                            </div>
+                            <div id="change-wrap" class="back">
+                                <i class="fas fa-backward"></i>
+                            </div>
+                            <div class="play-wrap">
+                                <div class="play"></div>
+                            </div>
+                            <div id="change-wrap" class="front">
+                                <i class="fas fa-forward"></i>
+                            </div>
+                            <a class="misc-wrap download">
+                                <i class="fas fa-download sound-url"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <h2 class="app-title">Sound Snatcher</h2>
+            <div class="playlist-window">
+                <div class="playlist-header">
+                    <form class="search-form">
+                        <div class="field">
+                            <input placeholder="Search for sounds..." class="sound-search" required></input>
+                            <button class="search-button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="source-selector">
+                        <span class="current-type">Effects</span>
+                        <div class="source-menu">
+                            <div class="menu-item effects-option">Effects</div>
+                            <div class="menu-item samples-option">Samples</div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="playlist-title"> Playlist </h2>
+                <div class="playlist-body">
+                    <div class="playlist">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

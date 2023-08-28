@@ -1,0 +1,463 @@
+.hidden {
+	display: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: #e0e5ec;
+}
+
+#viewport {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	min-height: 500px;
+	padding: 0px 25px 0px 25px;
+}
+
+.player-window {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	height: 90%;
+	min-width: 280px;
+	max-width: 450px;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	background: #e0e5ec;
+	border-radius: 2em;
+	border: 0;
+}
+
+.sound-details {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.sound-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+}
+.sound-info {
+	margin-top: 5%;
+	padding: 2%;
+}
+
+.sound-title {
+	color: black;
+	font-weight: 500;
+	font-size: calc(12px + 1vw);
+	font-family: AudioWide;
+	color: #f44336;
+	margin: 0;
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+
+.sound-artist {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 0.9rem;
+}
+
+.sound-image {
+	width: 80%;
+	height: 15rem;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.sound-controls {
+	align-items: center;
+	width: 100%;
+	margin-bottom: 10%;
+	margin-top: auto;
+}
+
+.sound-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.play-wrap {
+	transition: all 1s ease-in-out;
+	padding: 1rem;
+	width: 2rem;
+	height: 2rem;
+	color: #7e8a98;
+	outline: none;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	background: #e0e5ec;
+	border-radius: 3em;
+	border: 0;
+	cursor: pointer;
+}
+
+.play-wrap.playing {
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+		inset -10px -10px 10px rgba(255, 255, 255, 0.6);
+}
+
+.play-wrap.playing > .play {
+	width: 8px;
+	height: 2em;
+	margin-left: 0;
+	border-right: calc(0.8em - 2px) solid rgb(243 131 131 / 89%);
+	border-left: calc(0.8em - 2px) solid rgb(243 131 131 / 89%);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.play {
+	transition: all 0.2s;
+	display: inline-block;
+	margin-left: 10%;
+	width: 0;
+	height: 0;
+	border-right: 0;
+	border-left: 1.6em solid #f44336;
+	border-top: 1em solid transparent;
+	border-bottom: 1em solid transparent;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#change-wrap {
+	transition: all 0.2s;
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 0.5rem;
+	color: #f44336;
+	outline: none;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	background: #e0e5ec;
+	border-radius: 3em;
+	margin-left: 4%;
+	margin-right: 4%;
+	border: 0;
+	cursor: pointer;
+}
+
+.back {
+	padding-right: 0.6rem !important;
+	padding-top: 0.7rem !important;
+}
+
+.front {
+	padding-left: 0.6rem !important;
+	padding-top: 0.7rem !important;
+}
+
+#change-wrap:active {
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+		inset -10px -10px 10px rgba(255, 255, 255, 0.6);
+}
+
+#change-wrap:active > .fas {
+	color: #f3a5a5 !important;
+}
+
+.fa-forward,
+.fa-backward {
+	font-size: 1.2rem;
+}
+
+.misc-wrap {
+	width: 15px;
+	height: 15px;
+	padding: 0.5rem;
+	outline: none;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	background: #e0e5ec;
+	border-radius: 3em;
+	border: 0;
+	cursor: pointer;
+}
+
+.misc-wrap:active {
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+		inset -10px -10px 10px rgba(255, 255, 255, 0.6);
+}
+
+.download {
+	margin-right: auto;
+}
+
+.repeat {
+	transition: all 0.5s;
+	margin-left: auto;
+}
+
+.looping {
+	box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.1),
+		inset -10px -10px 10px rgba(255, 255, 255, 0.6);
+}
+
+.looping > .fas {
+	color: #f3a5a5 !important;
+}
+
+.sound-url,
+.repeat-icon {
+	font-size: 1rem;
+	color: #cf2a13;
+}
+
+.progress {
+	position: relative;
+	height: 7px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	background: rgb(253 151 151 / 30%);
+	cursor: pointer;
+}
+.sound-time {
+	display: flex;
+	flex-direction: row;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 0.9rem;
+}
+.current-time {
+	margin-right: auto;
+	margin-left: 10%;
+}
+.duration {
+	margin-right: 10%;
+	margin-left: auto;
+}
+.played {
+	width: 0%;
+	height: 7px;
+	position: absolute;
+	background: #f44336;
+}
+
+.progress .played .circle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #f44336;
+	border-radius: 50%;
+	left: 5%;
+	top: -6px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.right-content {
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+	height: 90%;
+	margin-left: 4%;
+}
+
+.search-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 2%;
+}
+.field {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	width: 70%;
+}
+
+.sound-search {
+	width: 100%;
+	display: block;
+	border: none;
+	color: #bf451bbf;
+	border-radius: 15px 0px 0px 15px;
+	padding: 0 20px;
+	outline: none;
+	box-shadow: inset 7px 6px 10px rgb(0 0 0 / 10%),
+		inset -2px -7px 10px rgb(255 255 255 / 60%);
+	background: #e0e5ec;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 600;
+	z-index: 1;
+}
+
+.sound-search:focus {
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+}
+
+.search-button {
+	width: 2.5rem;
+	height: 2rem;
+	outline: none;
+	border: 0;
+	background: #e0e5ec;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	padding: 0px 10px 0px 7px;
+	border-radius: 0px 15px 15px 0px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.search-button:active {
+	box-shadow: inset -2px 12px 10px rgb(0 0 0 / 10%),
+		inset 16px 6px 10px rgb(255 255 255 / 60%);
+}
+
+.source-selector {
+	position: relative;
+	padding: 5px 0px 5px 0px;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 600;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	width: 60%;
+	background: #e0e5ec;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	cursor: pointer;
+	trasition: all 5s ease-in-out;
+}
+.source-selector:hover .source-menu{
+	opacity: 1;
+	display: flex;
+}
+.source-menu {
+	trasition: all 5s ease-in-out;
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	top: 100%;
+	left: 20%;
+	width: 198px;
+	font-size: 0.9em;
+	opacity: 0;
+	background: #e0e5ec;
+	border-radius: 15px;
+	box-shadow: 4px 8px 16px 0px #03043c21;
+}
+
+.menu-item {
+	color: #333333;
+	text-align: left;
+	padding: 8px 0px 8px 12px;
+	width: 198px;
+	cursor: pointer;
+	background: rgba(157, 171, 192, 0);
+	text-decoration: none;
+	border-radius: 0;
+}
+
+.samples-option{
+	border-top: 2px solid #f62e0b9c;
+}
+
+.menu-item:hover {
+	background: rgba(157, 171, 192, 0.3);
+	transition: background 278.6ms cubic-bezier(0.69, 0.29, 0.58, 1);
+}
+
+.playlist-window {
+	display: flex;
+	flex-direction: column;
+	box-shadow: -5px -5px 15px 0px #ffffff9e, 5px 5px 15px 0px #a3b1c6a8;
+	height: 100%;
+	background: #e0e5ec;
+	overflow: clip;
+	border-radius: 2em;
+	border: 0;
+}
+.app-title {
+	font-family: AudioWide;
+	color: #f44336;
+	font-size: 1.9rem;
+	margin: 0;
+	margin-bottom: 15px;
+}
+.playlist-header {
+	display: flex;
+	flex-direction: column;
+}
+.playlist-title {
+	font-family: AudioWide;
+	font-size: 1.2rem;
+	margin: 0;
+	margin-bottom: 2%;
+}
+
+.playlist-body {
+	display: grid;
+	flex-direction: column;
+	height: 90%;
+	overflow-y: auto;
+	border-top: 2px solid #f62e0b9c;
+}
+
+.playlist-item {
+	display: flex;
+	flex-direction: column;
+	line-height: 1rem;
+	text-align: left;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-bottom: 2px solid #f62e0b9c;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: all 0.5s ease-in-out;
+}
+
+.active {
+	opacity: 1 !important;
+	background: #cb31003d !important;
+	padding-left: 5% !important;
+}
+
+.playlist-item:hover {
+	opacity: 0.7;
+	background: #cb31003d;
+	padding-left: 2.5%;
+	cursor: pointer;
+}
+
+@keyframes slideIn {
+	0% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 0%;
+	}
+}
+
+.item-name {
+	font-family: AudioWide;
+	color: #f44336;
+	font-size: 1rem;
+	margin: 0 0 10px 0;
+}
+
+.artist-name {
+	margin: 0;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 0.8rem;
+}

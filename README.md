@@ -17,8 +17,10 @@ npm install
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Use the following command in the preferred folder to install this repository.
+```
+gh repo clone Archetypical/Sound-Snatcher
+```
 
 ### Executing program
 

@@ -8,18 +8,19 @@ Sound Snatcher uses pond5.com api to search and curate sound effects and display
 
 ## Getting Started
 
-### Dependencies
-
-* Run the following command to install then necessary dependencies
-```
-npm install
-```
 
 ### Installing
 
 * Use the following command in the preferred folder to install this repository.
 ```
-gh repo clone Archetypical/Sound-Snatcher
+git clone https://github.com/Archetypical/Sound-Snatcher.git
+```
+
+### Dependencies
+
+* Run the following command to install then necessary dependencies
+```
+npm install
 ```
 
 ### Executing program

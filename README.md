@@ -2,6 +2,8 @@
 
 No Frills. Just Sounds.
 
+![home](screenshots/Sound-Snatcher.PNG)
+
 ## Description
 
 Sound Snatcher uses pond5.com api to search and curate sound effects and displays them in an easy to use interface.
